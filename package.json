@@ -9,10 +9,13 @@
   "license": "ISC",
   "description": "Refund API",
   "dependencies": {
-    "express": "^4.19.2"
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "refund-api": "file:"
   },
   "devDependencies": {
     "@rocketseat/eslint-config": "^2.2.2",
+    "@types/cors": "^2.8.17",
     "@types/express": "^5.0.0",
     "eslint": "^8.57.1",
     "ts-node": "^10.9.2",
