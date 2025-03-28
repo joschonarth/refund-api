@@ -11,7 +11,9 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.21.2",
-    "refund-api": "file:"
+    "express-async-errors": "^3.1.1",
+    "refund-api": "file:",
+    "zod": "^3.24.1"
   },
   "devDependencies": {
     "@rocketseat/eslint-config": "^2.2.2",
