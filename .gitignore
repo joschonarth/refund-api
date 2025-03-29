@@ -1,5 +1,9 @@
+# Node Modules
 node_modules
 
 # Database
 dev.db
 dev.db-journal
+
+# Environment Variables
+.env
