@@ -7,3 +7,6 @@ dev.db-journal
 
 # Environment Variables
 .env
+
+# Temporary files
+tmp
