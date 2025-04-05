@@ -22,13 +22,13 @@ class SessionsController {
     })
 
     if (!user) {
-      throw new AppError('Invalid credentials', 401)
+      throw new AppError('E-mail ou senha inválidos', 401)
     }
 
     const passwordMatched = await compare(password, user.password)
 
     if (!passwordMatched) {
-      throw new AppError('Invalid credentials', 401)
+      throw new AppError('E-mail ou senha inválidos', 401)
     }
 
     const { secret, expiresIn } = authConfig.jwt
@@ -38,7 +38,9 @@ class SessionsController {
       expiresIn,
     })
 
-    response.json({ token })
+    const { password: _, ...userWithoutPassword } = user
+
+    response.json({ token, user: userWithoutPassword })
   }
 }
 
