@@ -1,6 +1,6 @@
 <h1 align="center"><img src="./assets/icon.svg" width="22" /> Refund API</h1>
 
-<p align="center">💸 Uma API RESTful para gerenciamento de pedidos de reembolso, com autenticação, upload de comprovantes e estrutura moderna com Node.js, TypeScript e Prisma.
+<p align="center">💸 Uma API RESTful para controle e gerenciamento de pedidos de reembolso, construída com Node.js, TypeScript e Express.
   <br/><br/>
   <img src="https://img.shields.io/github/last-commit/joschonarth/refund-api?style=for-the-badge&color=1F8459&labelColor=1C1E26" alt="last-commit">
   <img src="https://img.shields.io/github/languages/top/joschonarth/refund-api?style=for-the-badge&color=1F8459&labelColor=1C1E26" alt="top-language">
