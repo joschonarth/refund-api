@@ -1,0 +1,40 @@
+@baseUrl = http://localhost:3333
+@token = {{authenticate.response.body.token}}
+
+### 👤 Criar Usuário
+POST {{baseUrl}}/users
+Content-Type: application/json
+
+{
+  "name": "Vasco",
+  "email": "vasco@example.com",
+  "password": "123456"
+}
+
+###
+
+### 🔐 Login
+# @name authenticate
+POST {{baseUrl}}/sessions
+Content-Type: application/json
+
+{
+  "email": "vasco@example.com",
+  "password": "123456"
+}
+
+###
+
+### 💸 Criar Reembolso
+POST {{baseUrl}}/refunds
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "name": "Reembolso Uber",
+  "category": "transport",
+  "amount": 45.90,
+  "filename": "8a744cc981b36e5c2734-comprovante.png"
+}
+
+###
