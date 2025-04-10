@@ -33,31 +33,25 @@ Refund é uma aplicação completa para gerenciamento de pedidos de reembolso, p
 - ⚙️ Express - Framework web minimalista e flexível.
 - 🧩 Prisma - ORM moderno para manipulação de banco de dados.
 - 🗃️ SQLite - Banco de dados leve e embutido.
-- 📦 Zod - Validação de esquemas de dados.
+- 💎 Zod - Validação de esquemas de dados.
 - 🔐 JWT - Autenticação via tokens seguros.
 - 🔑 Bcrypt - Criptografia de senhas.
 - 🌐 CORS - Compartilhamento de recursos entre origens.
 - 📤 Multer - Upload de arquivos multipart/form-data.
-- 📁 Dotenv - Gerenciamento de variáveis de ambiente.
+- 🌱 Dotenv - Gerenciamento de variáveis de ambiente.
 - 🧹 ESLint - Padronização e análise de código.
 
 ## ⚙️ Funcionalidades
 
-### 👤 Usuários
+- **👤 Criar usuário**: Registra um novo usuário na aplicação.
+- **🔐 Login**: Autentica um usuário e retorna um token JWT.
 
-- **Criar usuário**: Registra um novo usuário na aplicação.
-- **Login**: Autentica um usuário e retorna um token JWT.
+- **💸 Criar pedido de reembolso**: Cadastra uma nova solicitação com dados e comprovante.
+- **📋 Listar reembolsos**: Retorna todos os reembolsos solicitados pelo usuário.
+- **🔎 Visualizar reembolso**: Detalha um reembolso específico.
 
-### 💸 Reembolsos
-
-- **Criar pedido de reembolso**: Cadastra uma nova solicitação com dados e comprovante.
-- **Listar reembolsos**: Retorna todos os reembolsos solicitados pelo usuário.
-- **Visualizar reembolso por ID**: Detalha um reembolso específico.
-
-### 📎 Uploads
-
-- **Enviar arquivos**: Realiza upload de arquivos como comprovantes de reembolso.
-- **Buscar arquivos por ID**: Retorna o arquivo enviado.
+- **📤 Enviar comprovante**: Realiza upload de arquivos como comprovantes de reembolso.
+- **🧾 Buscar comprovante**: Retorna o arquivo enviado.
 
 ## 🚀 Como Executar o Projeto
 
@@ -118,7 +112,7 @@ Registra um novo usuário no sistema.
 
 - **Método:** ``POST``  
 - **URL:** `/users`
-- **Role** `employee`
+- **Role:** `employee`
 
 - **Exemplo de Requisição:**
 
@@ -136,7 +130,7 @@ Autentica o usuário e retorna um token JWT.
 
 - **Método:** ``POST``  
 - **URL:** `/sessions`
-- **Role** `employee`
+- **Role:** `employee`
 
 - **Exemplo de Requisição:**
 
@@ -170,7 +164,7 @@ Cadastra uma nova solicitação de reembolso.
 - **Método:** ``POST``  
 - **URL:** `/refunds`  
 - **Autenticação:** Requer token JWT no header `Authorization: Bearer`
-- **Role** `employee`
+- **Role:** `employee`
 
 - **Exemplo de Requisição:**
 
@@ -198,14 +192,14 @@ Cadastra uma nova solicitação de reembolso.
 }
 ```
 
-#### 📋 Listar Reembolsos
+### 📋 Listar Reembolsos
 
 Retorna todos os reembolsos do usuário autenticado.
 
 - **Método:** ``GET``  
 - **URL:** `/refunds`  
 - **Autenticação:** Requer token JWT no header `Authorization: Bearer`
-- **Role** `manager`
+- **Role:** `manager`
 
 - **Exemplo de Resposta:**
 
@@ -240,14 +234,14 @@ Retorna todos os reembolsos do usuário autenticado.
 }
 ```
 
-#### 🔎 Ver Reembolso por ID
+### 🔎 Ver Reembolso
 
 Exibe detalhes de um reembolso específico.
 
 - **Método:** GET  
 - **URL:** `/refund/:id`  
 - **Autenticação:** Requer token JWT no header `Authorization: Bearer`
-- **Role** `manager`
+- **Role:** `manager`
 
 - **Exemplo de Resposta:**
 
@@ -272,7 +266,7 @@ Exibe detalhes de um reembolso específico.
 }
 ```
 
-### 📤 Enviar Arquivo
+### 📤 Enviar Comprovante
 
 Faz upload de um comprovante de reembolso.
 
@@ -280,7 +274,7 @@ Faz upload de um comprovante de reembolso.
 - **URL:** `/uploads`  
 - **Formato:** `multipart/form-data` com campo `file`
 - **Autenticação:** Requer token JWT no header `Authorization: Bearer`
-- **Role** `employee`
+- **Role:** `employee`
 
 - **Exemplo de Resposta:**
 
@@ -290,14 +284,14 @@ Faz upload de um comprovante de reembolso.
 }
 ```
 
-#### 📥 Buscar Arquivo
+### 📁 Buscar Comprovante
 
-Busca e retorna um arquivo pelo seu ID.
+Busca e retorna um comprovante pelo seu ID.
 
 - **Método:** GET  
 - **URL:** `/uploads/:id`
 - **Autenticação:** Requer token JWT no header `Authorization: Bearer`
-- **Role** `manager`
+- **Role:** `manager`
 
 ## 🌐 Front-End
 
